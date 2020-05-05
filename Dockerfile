@@ -1,6 +1,12 @@
-FROM	farmcoolcow/fdupes:latest
+FROM	alpine:3.10
 
-RUN	apk --update-cache add bash
+RUN	apk --update-cache add fdupes
 
-WORKDIR	/data/mov1 /data/mov2 /data/mov3 /data/mov4 /data/mov5
+VOLUME	/data/mov1 
+VOLUME	/data/mov2 
+VOLUME	/data/mov3 
+VOLUME	/data/mov4 
+VOLUME	/data/mov5
+
+WORKDIR /data
 
